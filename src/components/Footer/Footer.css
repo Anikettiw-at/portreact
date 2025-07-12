@@ -1,137 +1,156 @@
-.footer{
-    margin : 50px 170px;
-    display:flex;
+.footer {
+  margin: 50px 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+  gap: 50px;
+}
+
+.footer-top-left p {
+  font-size: 20px;
+  width: 400px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-top-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.footer-email-input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  padding-right: 80px;
+  border-radius: 50px;
+  background: rgb(72, 70, 72);
+  transition: border 0.3s;
+}
+
+.footer-email-input input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  width: 100%;
+}
+
+.footer-email-input img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-subscribe {
+  font-size: 20px;
+  padding: 22px 50px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, orange 0%, blue 100%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer-subscribe:hover {
+  transform: scale(1.1);
+}
+
+.footer-email-input:hover {
+  border: 2px solid white;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  color: #aaa;
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 50px;
+  color: rgb(138, 138, 138);
+}
+
+.footer-bottom-right p:hover {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    margin: 50px 30px;
+  }
+
+  .footer-top {
     flex-direction: column;
+    align-items: flex-start;
     gap: 30px;
-    
-}
-.footer-top{
-    display: flex;
-    justify-content: space-between;
+  }
+
+  .footer-top-left p {
     width: 100%;
-    align-items: center;
-    padding: 20px 0;    
-    gap: 50px;
-
-}
-.footer-top-left p{
-
-    font-size: 20px;
-    width:400px;
-
-    
-}
-    
-.footer-top-right{
-    display: flex;
-    align-items: center;
-    gap:35px;
-
-}
-.footer-email-input{
-    display:flex;
-    gap:30px;
-
-    padding:20px 30px;
-    border-radius: 50px;
-    background: rgb(72, 70, 72);
-    padding-right:80px ;
-}
-.footer-email-input input{
-    outline:none;
-    border:none;
-    background:transparent;
-    color: white;
-    font-family: Outfit;
     font-size: 18px;
+  }
 
-}
-.footer-subscribe{
-    font-size: 20px;
-    padding: 22px 50px;
-    border-radius:50px;
-    background: linear-gradient(264deg, orange -5.1%, blue 100%);
-    cursor:pointer;
-    transition: 0.3s;
+  .footer-top-right {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
 
+  .footer-email-input {
+    width: 100%;
+    padding: 15px 20px;
+    gap: 10px;
+  }
 
-}
-.footer-bottom{
-    display: flex;
-    justify-content: space-between;
-    font-size:18px;
-        /* align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid rgb(243, 31, 31);
-    width: 100%; */
+  .footer-email-input input {
+    font-size: 16px;
+  }
 
-}
-/* .footer-bottom-left{
-    font-size: 20px;
-    color: rgb(130, 129, 129);
-} */
-.footer-bottom-right{
-    display: flex;
-    gap: 50px;
-    margin-bottom: 50px;
+  .footer-subscribe {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
 
-    color: rgb(138, 138, 138);
-}
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
 
-.footer-email-input:hover{
-    border: 2px solid white;
-    
-    
+  .footer-bottom-right {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-}
-.footer-subscribe:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-
-
-@media(max-width:768px) {
-    .footer{
-        margin: 50px 70px;
-    }
-    .footer-top{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .footer-bottom{
-        display: flex;
-        flex-direction: column-reverse;
-        margin-bottom: 50px;
-
-    }
-    
-    .footer-subscribe{
-        
-        text-align: center;
-       
-        padding: 10px 30px;
-        font-size: 16px;
-    }
-    .footer-email-input{
-        width: 100%;
-        padding: 10px 20px;
-        gap: 10px;
-    }
-    .footer-email-input input{
-        width: 100%;
-        font-size: 16px;
-    }
-    .footer-top-left p{
-        width: 100%;
-        font-size: 18px;
-    }
-    .footer-bottom-right{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .footer-bottom-right a{
-        font-size: 16px;
-    }
-
+  .footer-bottom-right p {
+    font-size: 16px;
+  }
 }

@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   margin: 50px 170px;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ hr {
 .footer-bottom-right p:hover {
   color: white;
   transition: color 0.3s ease;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 768px) {

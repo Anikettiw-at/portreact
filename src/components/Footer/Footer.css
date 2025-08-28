@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   padding: 50px 10%;
   background-color: #111;
   color: #ccc;
@@ -123,5 +123,131 @@ hr {
   .footer-bottom-right {
     flex-direction: column;
     gap: 10px;
+  }
+}
+ */
+
+
+/* ==== BASE STYLES (Mobile First) ==== */
+.footer {
+  padding: 50px 10%;
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-x: hidden;
+}
+
+/* --- Top Section --- */
+.footer-top {
+  display: flex;
+  flex-direction: column; /* Default: Stack vertically for mobile */
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-top-left p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column; /* Stack input and button on mobile */
+  gap: 20px;
+  width: 100%;
+}
+
+.footer-email-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #333;
+  padding: 12px 20px;
+  border-radius: 30px;
+  width: 100%;
+  box-sizing: border-box; /* Important for 100% width */
+}
+
+.footer-email-input input {
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 16px;
+  width: 100%; /* Take available space */
+}
+
+.footer-subscribe {
+  background: linear-gradient(135deg, #ff9800, #2196f3);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer-subscribe:hover {
+  transform: scale(1.05);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Bottom Section --- */
+.footer-bottom {
+  display: flex;
+  flex-direction: column-reverse; /* Stack and reverse for mobile */
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.footer-bottom-right {
+  display: flex;
+  flex-direction: column; /* Stack links for mobile */
+  gap: 10px;
+}
+
+.footer-bottom-right p:hover {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* ==== LAPTOP / DESKTOP STYLES ==== */
+@media (min-width: 992px) { /* Styles for screens wider than 992px */
+
+  .footer-top {
+    flex-direction: row; /* Arrange side-by-side */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-top-right {
+    flex-direction: row; /* Arrange form elements side-by-side */
+    width: auto; /* Reset width */
+  }
+  
+  .footer-email-input input {
+    width: 200px; /* Give a fixed width on desktop */
+  }
+
+  .footer-bottom {
+    flex-direction: row; /* Arrange side-by-side */
+    justify-content: space-between;
+  }
+  
+  .footer-bottom-right {
+    flex-direction: row; /* Arrange links side-by-side */
+    gap: 30px;
   }
 }
